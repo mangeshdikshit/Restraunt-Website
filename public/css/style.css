@@ -1,0 +1,181 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+
+
+.fa-cookie-bite{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.navbar{
+    background-color: white;
+    /* background-color: black; */
+    height: 5rem;
+}
+
+/* .nav-link{
+    color: white;
+} */
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links{
+    width: 100%;
+    text-align: center;
+}
+
+.f-info-socials{
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+}
+
+.f-info-socials i{
+    margin-right: 0.5rem;
+}
+
+
+.f-info-links .f-info-socials  .f-info-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info{
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+
+
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-body p{
+    font-weight: 400;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+
+.show-img{
+    height: 30vh;
+}
+
+
+
+
+/* user menu style */
+
+.userMenuItem{
+    margin-bottom: 20px;
+    padding: 15px;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-color: rgb(228, 238, 238);
+}
+
+.userMenuImage img{
+    width: 120px;
+    border-radius: 10px;
+}
+
+
+
+/* admin menu style */
+
+.adminMenuItem{
+    margin-bottom: 20px;
+    padding: 15px;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-color: rgb(228, 238, 238);
+}
+
+.adminMenuImage img{
+    width: 120px;
+    border-radius: 10px;
+}
+
+h2{
+    font-weight: bolder;
+    line-height: 50px;
+    margin-top: 40px;
+    color: red;
+    text-align: center;
+}
+
+
+
+/* home design */
+.homeHeading{
+    margin-top: 160px;
+    margin-bottom: 40px;
+    font-weight: bolder;
+    color: red;
+}
+
+.homeDesc{
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.login{
+    text-align: center;
+    margin-left: 390px;
+}
+
+.logout{
+    margin-left: 1080px;
+}
+
+
+/* gallary Image */
+
+#gallaryImage{
+    display: flex;
+    flex-wrap: wrap;
+}

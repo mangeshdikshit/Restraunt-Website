@@ -1,0 +1,28 @@
+<%- layout('/layouts/boilerplateAdmin') %>
+<body>
+    <div class="row">
+    
+
+        <div class="col-8 offset-2">
+            <h2>LOGIN</h2>
+            <form action="/admin" method="post" novalidate class="needs-validation">
+                <div class="mb-3 col-md-6 offset-3">
+                  <label for="username" class="form-label">username:</label>
+                  <input type="text" name="username" id="username" class="form-control" required/>
+                  <div class="invalid-feedback">please enter valid username.</div>
+                </div>
+                
+                
+                <div class="mb-3 col-md-6 offset-3" >
+                    <label for="password" class="form-label">password:</label>
+                    <input type="text" name="password" id="password" class="form-control" required/>
+                    <div class="invalid-feedback">please enter valid password.</div>
+                  </div>
+               
+                <button class="btn btn-dark login">LOGIN</button>
+                <br><br>
+              </form>
+        </div>
+      </div>
+
+</body>

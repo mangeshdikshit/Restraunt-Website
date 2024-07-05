@@ -1,0 +1,131 @@
+<%- layout('/layouts/boilerplateAdmin') %>
+<body>
+    <!-- <form action="/admin/menu/new" method="get">
+        <button>Add New Dish</button>
+    </form> -->
+
+    <h2>Starter</h2>
+
+  <% for(let i of data){ %>
+    <% if(i.dishType==="starter"){ %>
+        <div class="container">
+            <div class="row adminMenuItem">
+              <div class="col-2 adminMenuImage" ><img src="<%= i.imageLink %>" alt="image"></div>
+              
+              <div class="col-8 adminMenuDesc">
+                <h3><%= i.dishName %></h3>
+                <p><%= i.description %></p>
+            </div>
+        
+                <div class="col-1 adminMenuPrice">
+                    <p>&#x20B9;<%= i.price %></p>
+                </div>
+
+                <div class="col">
+                    <form action="/admin/menu/<%= i._id %>/edit">
+                        <button class="btn btn-dark mb-1">Edit</button>
+                    </form>
+
+                    <form action="/admin/menu/<%= i._id %>?_method=DELETE" method="post">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+          </div>
+          <% } %> 
+  
+
+  <% } %> 
+
+  <h2>Main-Course</h2>
+
+  <% for(let i of data){ %>
+    <% if(i.dishType==="maincourse"){ %>
+        <div class="container">
+            <div class="row adminMenuItem">
+              <div class="col-2 adminMenuImage" ><img src="<%= i.imageLink %>" alt="image"></div>
+              
+              <div class="col-8 adminMenuDesc">
+                <h3><%= i.dishName %></h3>
+                <p><%= i.description %></p>
+            </div>
+        
+                <div class="col-1 adminMenuPrice">
+                    <p>&#x20B9;<%= i.price %></p>
+                </div>
+
+                <div class="col">
+                    <form action="/admin/menu/<%= i._id %>/edit">
+                        <button class="btn btn-dark mb-1">Edit</button>
+                    </form>
+
+                    <form action="/admin/menu/<%= i._id %>?_method=DELETE" method="post">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+          </div>
+          <% } %> 
+  
+
+  <% } %> 
+
+  <h2>Desert</h2>
+
+
+    <% for(let i of data){ %>
+        <% if(i.dishType==="desert"){ %>
+            <div class="container">
+                <div class="row adminMenuItem">
+                  <div class="col-2 adminMenuImage" ><img src="<%= i.imageLink %>" alt="image"></div>
+                  
+                  <div class="col-8 adminMenuDesc">
+                    <h3><%= i.dishName %></h3>
+                    <p><%= i.description %></p>
+                </div>
+            
+                    <div class="col-1 adminMenuPrice">
+                        <p>&#x20B9;<%= i.price %></p>
+                    </div>
+
+                    <div class="col">
+                        <form action="/admin/menu/<%= i._id %>/edit">
+                            <button class="btn btn-dark mb-1">Edit</button>
+                        </form>
+    
+                        <form action="/admin/menu/<%= i._id %>?_method=DELETE" method="post">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <% } %> 
+              <% } %> 
+
+
+
+
+    <!-- <% for(let i of data){ %>
+        <ul>
+            <li><%= i._id %></li>
+            <li><%= i.dishName %></li>
+            <li><%= i.price %></li>
+            <li><%= i.description %></li>
+            <li><%= i.imageLink %></li>
+            <li><%= i.dishType %></li>
+        </ul>
+
+        <form action="/admin/menu/<%= i._id %>/edit">
+            <button>Edit</button>
+        </form>
+
+        <form action="/admin/menu/<%= i._id %>?_method=DELETE" method="post">
+            <button>Delete</button>
+        </form>
+        
+        <hr>
+        <% } %> -->
+    
+   
+</body>

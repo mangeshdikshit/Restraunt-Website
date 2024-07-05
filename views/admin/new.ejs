@@ -1,0 +1,80 @@
+<%- layout('/layouts/boilerplateAdmin') %>
+<body>
+
+    <div class="row">
+    
+
+        <div class="col-8 offset-2">
+            <h2>New Dish</h2>
+            <form action="/admin/menu" method="post" novalidate class="needs-validation">
+                <div class="mb-3">
+                  <label for="dishName" class="form-label">Dish Name:</label>
+                  <input type="text" name="dishName" id="dishName" class="form-control" required/>
+                  <div class="invalid-feedback">please enter valid dish name.</div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="description" class="form-label">Description:</label>
+                  <textarea
+                    name="description"
+                    cols="30"
+                    rows="3"
+                    id="description"
+                    class="form-control"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">please enter valid description.</div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="imageLink" class="form-label">Image:</label>
+                  <textarea
+                    name="imageLink"
+                    cols="30"
+                    rows="3"
+                    id="imageLink"
+                    class="form-control"
+                  ></textarea>
+                </div>
+    
+                <div class="row">
+                    <div class="mb-3 col-md-4" >
+                        <label for="price" class="form-label">Price:</label>
+                        <input type="number" name="price" id="price" class="form-control" required/>
+                        <div class="invalid-feedback">please enter valid price.</div>
+                      </div>
+          
+                      <div class="mb-3 col-md-8" >
+                          <label for="dishType" class="form-label">Dish Type:</label>
+                          <select name="dishType" id="dishType" class="form-control" required>
+                            <option value="starter">starter</option>
+                            <option value="maincourse">Main-Course</option>
+                            <option value="desert">Desert</option>
+                          </select>
+                          <!-- <input type="text" name="dishType" id="dishType" class="form-control" required/> -->
+                          <div class="invalid-feedback">please select a dishType.</div>
+                        </div>
+                </div>
+    
+                
+            
+                <button class="btn btn-dark">List</button>
+                <br><br>
+              </form>
+        </div>
+      </div>
+
+
+
+
+    <!-- <h3>Add New Dish:</h3>
+    <form action="/admin/menu" method="post">
+        <input type="text" placeholder="Enter dishName" name="dishName">
+        <input type="number" placeholder="Enter price of dish" name="price">
+        <input type="text" placeholder="Enter type of dish" name="dishType">
+        <textarea name="description"  cols="30" rows="3" placeholder="Enter description of dish"></textarea>
+        <textarea name="imageLink" cols="30" rows="3" placeholder="Enter url of image"></textarea>
+        
+        <button>submit</button>
+    </form> -->
+</body>

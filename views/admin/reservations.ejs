@@ -1,0 +1,58 @@
+<%- layout('/layouts/boilerplateAdmin') %>
+<body>
+    <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Name</th>
+            <th scope="col">Table For</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile No.</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(let i of data) { %>
+                <tr>
+                    <th scope="row"><%= i.date %></th>
+                    <td><%= i.time %></td>
+                    <td><%= i.name %></td>
+                    <td><%= i.tableFor %></td>
+                    <td><%= i.email %></td>
+                    <td><%= i.mobileNo %></td>
+                    <td> <form action="/admin/reservations/<%= i._id %>?_method=DELETE" method="post"> <button class="btn btn-dark"><i class="fa-solid fa-check"></i></button></form></td>
+                </tr>
+            <% } %>
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+      </table>
+  
+  <!-- <% for(let i of data){ %>
+  <ul>
+    <li><%= i.name %></li>
+    <li><%= i.email %></li>
+    <li><%= i.mobileNo %></li>
+    <li><%= i.tableFor %></li>
+    <li><%= i.date %></li>
+    <li><%= i.time %></li>
+    <hr />
+  </ul>
+  <% } %> -->
+</body>

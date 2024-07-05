@@ -1,0 +1,85 @@
+<%- layout('/layouts/boilerplateAdmin') %>
+<body>
+
+    <div class="row">
+    
+
+        <div class="col-8 offset-2">
+            <h2>Edit Menu</h2>
+            <form action="/admin/menu/<%= _id %>?_method=PATCH" method="post" novalidate class="needs-validation">
+                <div class="mb-3">
+                  <label for="dishName" class="form-label">Dish Name:</label>
+                  <input type="text" name="dishName" id="dishName" class="form-control" value="<%= dishName %>" required/>
+                  <div class="invalid-feedback">please enter valid title.</div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="description" class="form-label">Description:</label>
+                  <textarea
+                    name="description"
+                    cols="30"
+                    rows="3"
+                    id="description"
+                    class="form-control"
+                    required
+                  ><%= description %></textarea>
+                  <div class="invalid-feedback">please enter valid description.</div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="imageLink" class="form-label">Image:</label>
+                  <textarea
+                    name="imageLink"
+                    cols="30"
+                    rows="3"
+                    id="imageLink"
+                    class="form-control"
+                    required
+                  ><%= imageLink %></textarea>
+                  <div class="invalid-feedback">please enter valid image-link.</div>
+                </div>
+    
+                <div class="row">
+                    <div class="mb-3 col-md-4" >
+                        <label for="price" class="form-label">Price:</label>
+                        <input type="number" name="price" id="price" class="form-control" value="<%= price %>" required/>
+                        <div class="invalid-feedback">please enter valid price.</div>
+                      </div>
+          
+                      <div class="mb-3 col-md-8" >
+                          <label for="dishType" class="form-label">Dish Type:</label>
+                          <select name="dishType" id="dishType" class="form-control" required>
+                            <option value="starter">starter</option>
+                            <option value="maincourse">Main-Course</option>
+                            <option value="desert">Desert</option>
+                          </select>
+                          <!-- <input type="text" name="dishType" id="dishType" class="form-control" value="<%= dishType %>" required/> -->
+                          <div class="invalid-feedback">please enter valid country.</div>
+                        </div>
+                </div>
+                
+            
+                <button class="btn btn-dark">Edit</button>
+                <br><br>
+              </form>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    <!-- <h3>Edit Menu:</h3>
+    <form action="/admin/menu/<%= _id %>?_method=PATCH" method="post">
+        <input type="text" value="<%= dishName %>" name="dishName">
+        <input type="number" value="<%= price %>" name="price">
+        <input type="text" value="<%= dishType %>" name="dishType">
+        <textarea name="description"  cols="30" rows="3" ><%= description %></textarea>
+        <textarea name="imageLink" cols="30" rows="3" ><%= imageLink %></textarea>
+        <button>submit</button>
+    </form> -->
+</body>

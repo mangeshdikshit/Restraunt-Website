@@ -1,0 +1,83 @@
+<%- layout('/layouts/boilerplateUser') %>
+<body>
+  <h2>Starter</h2>
+
+  <% for(let i of data){ %>
+    <% if(i.dishType==="starter"){ %>
+        <div class="container">
+            <div class="row userMenuItem">
+              <div class="col-2 userMenuImage" ><img src="<%= i.imageLink %>" alt="image"></div>
+              
+              <div class="col-9 userMenuDesc">
+                <h3><%= i.dishName %></h3>
+                <p><%= i.description %></p>
+            </div>
+        
+                <div class="col userMenuPrice">
+                    <p>&#x20B9;<%= i.price %></p>
+                </div>
+            </div>
+          </div>
+          <% } %> 
+  
+
+  <% } %> 
+
+  <h2>Main-Course</h2>
+
+  <% for(let i of data){ %>
+    <% if(i.dishType==="maincourse"){ %>
+        <div class="container">
+            <div class="row userMenuItem">
+              <div class="col-2 userMenuImage" ><img src="<%= i.imageLink %>" alt="image"></div>
+              
+              <div class="col-9 userMenuDesc">
+                <h3><%= i.dishName %></h3>
+                <p><%= i.description %></p>
+            </div>
+        
+                <div class="col userMenuPrice">
+                    <p>&#x20B9;<%= i.price %></p>
+                </div>
+            </div>
+          </div>
+          <% } %> 
+  
+
+  <% } %> 
+
+  <h2>Desert</h2>
+
+  <% for(let i of data){ %>
+    <% if(i.dishType==="desert"){ %>
+        <div class="container">
+            <div class="row userMenuItem">
+              <div class="col-2 userMenuImage" ><img src="<%= i.imageLink %>" alt="image"></div>
+              
+              <div class="col-9 userMenuDesc">
+                <h3><%= i.dishName %></h3>
+                <p><%= i.description %></p>
+            </div>
+        
+                <div class="col userMenuPrice">
+                    <p>&#x20B9;<%= i.price %></p>
+                </div>
+            </div>
+          </div>
+          <% } %> 
+  
+
+  <% } %> 
+  
+  <!-- <% for(let i of data){ %>
+  <ul>
+    <li><%= i._id %></li>
+    <li><%= i.dishName %></li>
+    <li><%= i.price %></li>
+    <li><%= i.description %></li>
+    <li><%= i.imageLink %></li>
+    <li><%= i.dishType %></li>
+  </ul>
+  <hr />
+  <% } %> -->
+</body>

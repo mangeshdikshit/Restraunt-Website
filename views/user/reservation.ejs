@@ -1,0 +1,55 @@
+<%- layout('/layouts/boilerplateUser') %>
+<body>
+
+    <div class="row">
+    
+
+        <div class="col-8 offset-2">
+            <h2>Book The Table</h2>
+            <form action="/restraunt" method="post" novalidate class="needs-validation">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input type="text" name="name" id="name" class="form-control" required/>
+                  <div class="invalid-feedback">please enter valid Name.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" required/>
+                    <div class="invalid-feedback">please enter valid Email.</div>
+                  </div>
+    
+    
+                <div class="row">
+                    <div class="mb-3 col-md-4" >
+                        <label for="mobileNo" class="form-label">Mobile No.:</label>
+                        <input type="tel" name="mobileNo" id="mobileNo" class="form-control" required/>
+                        <div class="invalid-feedback">please enter valid mobileNo.</div>
+                      </div>
+          
+                      <div class="mb-3 col-md-8" >
+                          <label for="tableFor" class="form-label">Table For:</label>
+                          <input type="number" name="tableFor" id="tableFor" class="form-control" required/>
+                          <div class="invalid-feedback">please Enter number of people.</div>
+                        </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="dateTime" class="form-label">Date & Time:</label>
+                    <input type="datetime-local" name="dateTime" id="dateTime" class="form-control" required/>
+                    <div class="invalid-feedback">please enter time of reservation.</div>
+                  </div>
+    
+                
+            
+                <button class="btn btn-dark">BOOK THE TABLE</button>
+                <br><br>
+              </form>
+        </div>
+      </div>
+
+
+
+
+    
+</body>

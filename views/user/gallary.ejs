@@ -1,0 +1,18 @@
+<%- layout('/layouts/boilerplateUser') %>
+<body>
+
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-5">
+        <% for(let i of data) { %>
+            <div class="card" style="width: 18rem;">
+                <img src="<%= i.imageLink %>" class="card-img-top" alt="...">
+                
+              </div>
+              <% } %>
+    </div>
+
+
+        
+        
+      
+    
+</body>
